@@ -1,6 +1,11 @@
 package com.lukaslechner.coroutineusecasesonandroid.utils
 
-import okhttp3.*
+import okhttp3.Interceptor
+import okhttp3.MediaType
+import okhttp3.Protocol
+import okhttp3.Request
+import okhttp3.Response
+import okhttp3.ResponseBody
 import kotlin.random.Random
 
 class MockNetworkInterceptor : Interceptor {
@@ -54,7 +59,7 @@ class MockNetworkInterceptor : Interceptor {
 
     private fun createErrorResponse(request: Request, errorBody: String = "Error"): Response {
         return Response.Builder()
-            .code(500)
+            .code(if (Random.nextInt(100) > 50) 500 else 404)
             .request(request)
             .protocol(Protocol.HTTP_1_1)
             .message("Internal Server Error: $errorBody")
