@@ -1,7 +1,11 @@
 package com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase4
 
 import com.google.gson.Gson
-import com.lukaslechner.coroutineusecasesonandroid.mock.*
+import com.lukaslechner.coroutineusecasesonandroid.mock.createMockApi
+import com.lukaslechner.coroutineusecasesonandroid.mock.mockAndroidVersions
+import com.lukaslechner.coroutineusecasesonandroid.mock.mockVersionFeaturesAndroid10
+import com.lukaslechner.coroutineusecasesonandroid.mock.mockVersionFeaturesOreo
+import com.lukaslechner.coroutineusecasesonandroid.mock.mockVersionFeaturesPie
 import com.lukaslechner.coroutineusecasesonandroid.utils.MockNetworkInterceptor
 
 fun mockApi() = createMockApi(
