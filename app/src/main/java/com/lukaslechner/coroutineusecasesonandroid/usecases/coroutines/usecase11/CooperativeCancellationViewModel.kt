@@ -15,7 +15,7 @@ class CooperativeCancellationViewModel(
     }
 
     fun cancelCalculation() {
-
+        // todo
     }
 
     fun uiState(): LiveData<UiState> = uiState
